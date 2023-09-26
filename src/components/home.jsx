@@ -3,7 +3,6 @@ import { products } from '../data/productsData'
 import Pagination from './pagination'
 
 const Home = () => {
-    //const [products, setProducts] = useState([]);
     const [currentPage, setCurrentPage] = useState(1);
     const [pageSize, setPageSize] = useState(6);
     const [inputValue, setInputValue] = useState();
@@ -38,7 +37,14 @@ const Home = () => {
                     </>
                 )
             }
-            <Pagination currentPage={currentPage} setCurrentPage={setCurrentPage} lastPage={lastPage} fixPages={[6, 10, 15, 60, 100]} skip maxNumber={11} pageSize={pageSize} setPageSize={setPageSize} /> 
+            <Pagination 
+                currentPage={currentPage} 
+                setCurrentPage={setCurrentPage} 
+                lastPage={lastPage} 
+                fixPages={[6, 10, 15, 60, 100]} 
+                skip maxNumber={11} 
+                pageSize={pageSize} 
+                setPageSize={setPageSize} /> 
         </div>
     </>
   )

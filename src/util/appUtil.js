@@ -1,9 +1,7 @@
 export const initalDot = '...';
 export function paginationRange (currentPage, lastPage, maxNumber){
     const res = [];
-    /* let initalDot = '...';
-    let initalDotLeft = '... ';
-    let initalDotRight = ' ...'; */
+   
     for (let i = 1; i <= lastPage; i++) {
         res.push(i);
     }
@@ -44,42 +42,6 @@ export function paginationRange (currentPage, lastPage, maxNumber){
             totalPageNo = ([1, 2, 3, initalDot, ...slicePages3])
         } 
     }
-    /* if(lastPage <= maxNumber){
-        for (let i = 1; i <= lastPage; i++) {
-            res.push(i);
-        }
-    }
-    else{
-        const firstPage = 1;
-        const totalPageCount = 3;
-        const remainMaxNumber = maxNumber - totalPageCount;
-        const sideLength = remainMaxNumber / 2;
-        if(currentPage - firstPage <= sideLength || lastPage - currentPage < sideLength){
-            for (let j = firstPage; j <= firstPage+sideLength; j++) {
-                res.push(j);
-            }
-            res.push('...');
-            for (let k = lastPage - sideLength; k <= lastPage; k++) {
-                res.push(k);
-            }
-        } else if(currentPage - firstPage >= remainMaxNumber && lastPage - currentPage >= remainMaxNumber ){
-            const removeSideLength = sideLength - 1;
-            res.push(firstPage);
-            res.push('...');
-            for (let l = currentPage - removeSideLength; l <= currentPage + removeSideLength; l++) {
-                res.push(l);
-                res.push('...');
-                res.push(lastPage);
-                
-            }
-        }
-    } */
+    
     return totalPageNo;
 }
-
-/* console.log(paginationRange(1, 5, 11));
-console.log(paginationRange(1, 7, 11));
-console.log(paginationRange(1, 10, 11));
-console.log(paginationRange(9, 10, 11));
-console.log(paginationRange(5, 10, 11));
-console.log(paginationRange(6, 10, 11)); */
